@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kings and Pawns</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="mission">YOUR TEAM! SELECT HERO</h2>
+    <div class="container">
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="warning">You Win!</p>
+            </div>
+        </div>
+        <div class="field">
+            <div class="field__enemy">
+                <label class="hero enemy">
+                    <img src="images/archer1.webp" alt="" style="width: 150px; border-radius: 20px;">
+                    <h2 id="enemyArcherDead">Archer</h2>
+                    <span class="green-clr">HP: <span id="enemyArchHp">100</span></span>
+                    <h4 class="hero-description">DAMAGE: 50</h4>
+                    <h4 class="hero-description">CRIT DAMAGE: 75</h4>
+                </label>
+                <label class="hero enemy">
+                    <img src="images/knight1.jpg" alt="" style="width: 150px; border-radius: 20px;">
+                    <h2 id="enemyKnightDead">Knight</h2>
+                    <span class="green-clr">HP: <span id="enemyKnightHp">250</span></span>
+                    <h4 class="hero-description">DAMAGE: 25</h4>
+                    <h4 class="hero-description">CRIT DAMAGE: 50</h4>
+                </label>
+                <label class="hero enemy">
+                    <img src="images/cavalry2.jpg" alt="" style="width: 150px; border-radius: 20px;">
+                    <h2 id="enemyCavalDead">Cavalry</h2>
+                    <span class="green-clr">HP: <span id="enemyCavalHp">180</span></span>
+                    <h4 class="hero-description">DAMAGE: 35</h4>
+                    <h4 class="hero-description">CRIT DAMAGE: 70</h4>
+                </label>
+                <h2 class="team-identify">Enemy Team</h2> 
+            </div>
+            <div class="field__team">
+                <label class="hero teammate">
+                    <img src="images/archer1.webp" alt="" style="width: 150px; border-radius: 20px;">
+                    <h2 id="teamArcherDead">Archer</h2>
+                    <span class="green-clr">HP: <span id="teamArchHp">100</span></span>
+                    <h4 class="hero-description">DAMAGE: 50</h4>
+                    <h4 class="hero-description">CRIT DAMAGE: 75</h4>
+                </label>
+                <label class="hero teammate">
+                    <img src="images/knight1.jpg" alt="" style="width: 150px; border-radius: 20px;">
+                    <h2 id="teamKnightDead">Knight</h2>
+                    <span class="green-clr">HP: <span id="teamKnightHp">250</span></span>
+                    <h4 class="hero-description">DAMAGE: 25</h4>
+                    <h4 class="hero-description">CRIT DAMAGE: 50</h4>
+                </label>
+                <label class="hero teammate">
+                    <img src="images/cavalry2.jpg" alt="" style="width: 150px; border-radius: 20px;">
+                    <h2 id="teamCavalDead">Cavalry</h2>
+                    <span class="green-clr">HP: <span id="teamCavalHp">180</span></span>
+                    <h4 class="hero-description">DAMAGE: 35</h4>
+                    <h4 class="hero-description">CRIT DAMAGE: 70</h4>
+                </label>   
+                <h2 class="team-identify">Your Team</h2> 
+            </div>
+        </div>
+        <div class="music-rules">
+            <div class="rules">
+                <h2>
+                    Kings And Pawns Rules: <br>
+                </h2>
+                <br>
+                <h3 class="rules__description">
+                    Your team hit first. <br>
+                    Every hero have chance to miss (archer: 50%, knight: 0%, cavalry: 33%) and crit 2x damage (archer crit damage: 1.5x). <br>
+                    In your move, first of all, you need to choose one of three heroes. <br> 
+                    Then, you need to choose a target, whose will take damage from your choosen hero. <br>
+                    After this, enemy team moving <br> <br>
+                    <span>THATS ALL! GLHF</span> 
+                </h3>
+            </div>
+            <h2 class="mus-desc">
+                Music: 
+            </h2>
+            <label class="music-site" onclick="setMusic()">
+                <div class="btn-offmusic" id="musicBtn">
+                    Off/On
+                </div>
+            <audio volume="0.5" src="audio/Sea of Thieves Tavern Tunes_ We Shall Sail Together.mp3" autoplay loop="infinity" id="song"></audio>
+            </label>
+            <input type="range" class="input-volume" oninput="changeVolume(value)" min="0" max="100" step="1" value="50">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
